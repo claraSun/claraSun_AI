@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/claraSun_AI/static/css/main.c9d37e0b.css",
+    "main.js": "/claraSun_AI/static/js/main.d79ef38e.js",
+    "static/js/453.781a5417.chunk.js": "/claraSun_AI/static/js/453.781a5417.chunk.js",
+    "index.html": "/claraSun_AI/index.html",
+    "main.c9d37e0b.css.map": "/claraSun_AI/static/css/main.c9d37e0b.css.map",
+    "main.d79ef38e.js.map": "/claraSun_AI/static/js/main.d79ef38e.js.map",
+    "453.781a5417.chunk.js.map": "/claraSun_AI/static/js/453.781a5417.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c9d37e0b.css",
+    "static/js/main.d79ef38e.js"
+  ]
+}
