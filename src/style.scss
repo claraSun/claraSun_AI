@@ -1,0 +1,183 @@
+.agent-container {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  grid-template-rows: 1fr;
+  &-history {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+    padding: 15px;
+    box-sizing: border-box;
+    &__btns {
+      width: 100%;
+      height: 30px;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__wrapper {
+      padding: 15px 0;
+      flex: 1; /* 這會使中間的內容區域自動填滿剩餘空間 */
+      overflow-y: auto;
+      // .all-history {
+      //   height: 100%;
+      // }
+      div {
+        
+        h3 {
+          font-size: 0.9rem;
+          color: #a7a7a7;
+          line-height: 2;
+          font-weight: bold;
+        }
+        .single-chat {
+          display: flex;
+          flex-flow: row;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          .goto-single {
+            cursor: pointer;
+            font-size: 0.9rem;
+            width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+          }
+          .del-btn {
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+    &__footer {
+      height: 30px;
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      padding: 15px;
+      box-sizing: border-box;
+    }
+  }
+  &-chat {
+    width: 100%;
+    height: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30px 1fr 60px;
+    grid-row-gap: 10px;
+    padding: 15px;
+    box-sizing: border-box;
+    &__btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      .chakra-avatar {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      
+    }
+    &__wrapper {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+      display: flex;
+      flex-flow: column;
+      gap: 15px;
+      .start-new {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .query-block {
+        width: 100%;
+        display: flex;
+        justify-content:flex-end;
+        div {
+          border-radius: 15px;
+          background: rgba(244, 244, 244, 0.6);
+          padding: 5px 15px;
+          width: 50%;
+        }
+      }
+      .answer-block {
+        width: 100%;
+        display: flex;
+        justify-content:flex-start;
+        div {
+          width: 100%;
+          div {
+            font-size: 0.8rem;
+            text-align: left;
+            padding: 5px 15px;
+            width: 50%;
+          }
+        }
+      }
+      .right {
+        width: calc(100% - 30px);
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-end;
+        
+      }
+      .left {
+        width: calc(100% - 30px);
+        display: flex;
+        flex-flow: row;
+        justify-content: flex-start;
+       
+      }
+    }
+  }
+}
+
+.full {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
+.hidden {
+  display: none;
+}
+
+.flat-btn {
+  width: 50px;
+}
+
+.sample-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-flow: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-content: center;
+  div {
+    width: 35%;
+    height: calc(calc( 100vh - 200px) / 5);
+    border-radius: 15px;
+    border: 1px #ccc solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+}
