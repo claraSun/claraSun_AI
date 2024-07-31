@@ -147,14 +147,14 @@ const SingleChat = ({ propConversationId, fetchHistoryData }) => {
   return (
     <div className='agent-container-chat'>
       <div className='agent-container-chat__btns'>
-        <div>前端工程師_孫瑋翎</div>
+        {/* <div>前端工程師_孫瑋翎</div> */}
         {/* <Avatar size='sm' name='Kent Dodds' src='https://bit.ly/kent-c-dodds' /> */}
       </div>
 
       {loading && messages.length === 0 ? (
         <div className='agent-container-chat__wrapper'>
           <div className='start-new'>
-            請建立新的對話
+            可以開始關於前端工程師_孫瑋翎的對話
           </div>
         </div>
       ) : (
@@ -186,12 +186,12 @@ const SingleChat = ({ propConversationId, fetchHistoryData }) => {
         </div>
       )}
 
-      <div>
+      <div className='query-block'>
         <InputGroup size='md'>
           <Input
             pr='4.5rem'
             variant='filled'
-            placeholder='請輸入有關孫瑋翎的問題'
+            placeholder='請輸入問題'
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             onKeyDown={handleKeyDown}

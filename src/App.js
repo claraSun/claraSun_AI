@@ -1,7 +1,7 @@
 import './App.css';
 import './style.scss';
 import React, { useEffect, useState, useCallback } from 'react';
-import { ArrowLeftIcon, ArrowRightIcon, EditIcon, InfoOutlineIcon, SmallCloseIcon,CopyIcon } from '@chakra-ui/icons';
+import { ArrowLeftIcon, ArrowRightIcon, EditIcon, InfoOutlineIcon, SmallCloseIcon,AddIcon } from '@chakra-ui/icons';
 import { IconButton, useDisclosure, Button } from '@chakra-ui/react';
 import { getAllConversation, deleteSingleChat } from './api/api';
 import SingleChat from './components/SingleChat';
@@ -119,8 +119,10 @@ function Home() {
       <div className={`agent-container ${isHistoryVisible ? '' : 'full'}`}>
         <div className={`agent-container-history ${isHistoryVisible ? '' : 'hidden'}`}>
           <div className='agent-container-history__btns'>
-            <IconButton variant='outline' colorScheme='blue' icon={<ArrowLeftIcon />} onClick={toggleHistoryVisibility} />
-            <IconButton aria-label='edit' variant='outline' colorScheme='teal' icon={<EditIcon />} onClick={() => handleClick('null')} />
+            {/* <IconButton variant='outline' colorScheme='blue' icon={<ArrowLeftIcon />} onClick={toggleHistoryVisibility} /> */}
+            {/* <IconButton aria-label='edit' variant='outline' colorScheme='teal' icon={<EditIcon />} onClick={() => handleClick('null')} /> */}
+            <ArrowLeftIcon boxSize={4} />
+            <EditIcon boxSize={6} />
           </div>
           <div className='agent-container-history__wrapper'>
             {history && Object.keys(history).map((date, index) => (
@@ -140,8 +142,8 @@ function Home() {
             ))}
           </div>
           <div className='agent-container-history__footer' onClick={showInfo}>
-            <InfoOutlineIcon />
-            使用說明
+            {/* <InfoOutlineIcon /> */}
+            ClaraSun_AI Beta
           </div>
         </div>
 
@@ -176,7 +178,7 @@ function Home() {
             </AlertDialogContent>
           </AlertDialogOverlay>
         </AlertDialog>
-        <AlertDialog isOpen={infoDialog.isOpen} leastDestructiveRef={cancelRef} onClose={infoDialog.onClose}>
+        {/* <AlertDialog isOpen={infoDialog.isOpen} leastDestructiveRef={cancelRef} onClose={infoDialog.onClose}>
           <AlertDialogOverlay>
             <AlertDialogContent>
               <AlertDialogHeader fontSize='lg' fontWeight='bold'>
@@ -198,7 +200,7 @@ function Home() {
               </AlertDialogFooter>
             </AlertDialogContent>
           </AlertDialogOverlay>
-        </AlertDialog>
+        </AlertDialog> */}
       </div>
   );
 }
